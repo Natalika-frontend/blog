@@ -1,6 +1,10 @@
 import styled from "styled-components";
-import { Icon } from "../../../../components";
+import myLogo from "../../../../images/logo.png";
 import { Link } from "react-router-dom";
+
+const Img = styled.img`
+	margin-top: 13px;
+`;
 
 const LargeText = styled.div`
 	font-size: 48px;
@@ -16,7 +20,7 @@ const SmallText = styled.div`
 
 const LogoContainer = ({className}) => (
 	<Link className={className} to="/">
-		<Icon id="fa-code" size="70px" margin="0 10px 0 0"/>
+		<Img src={myLogo}/>
 		<div>
 			<LargeText>Блог</LargeText>
 			<SmallText>Геллы Грачевой</SmallText>
