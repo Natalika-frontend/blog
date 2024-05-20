@@ -6,13 +6,13 @@ import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux'
 import styled from "styled-components";
 import { AuthFormError, Button, H2, Input } from "../../components";
-import { Link, Navigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { setUser } from "../../actions";
 import { selectUserRole } from "../../selectors";
 import { ROLE } from "../../constants";
 import { useResetForm } from "../../hooks";
 
-const authFormSchema = yup.object().shape({
+const registerFormSchema = yup.object().shape({
 	login: yup.string()
 		.required("Заполните логин")
 		.matches(/^\w+$/, "Неверно заполнен логин. Допускаются только буквы и цифры")
@@ -23,16 +23,13 @@ const authFormSchema = yup.object().shape({
 		.matches(/^[\w#%]+$/, "неверно заполнен пароль. Допускаются только буквы, цифры и знаки # и %")
 		.min(8, "Неверно заполнен пароль. Минимум 8 символов")
 		.max(30, "Неверно заполнен пароль. Максимум 30 символов"),
+	passcheck: yup
+		.string()
+		.required("Повторите пароль")
+		.oneOf([yup.ref('password'), null], 'Пароли не совпадают'),
 });
 
-const StyledLink = styled(Link)`
-	text-align: center;
-	text-decoration: underline;
-	margin: 20px 0;
-	font-size: 18px;
-`;
-
-const AuthorisationContainer = ({className}) => {
+const RegistrationContainer = ({className}) => {
 	const {
 		register,
 		reset,
@@ -42,8 +39,9 @@ const AuthorisationContainer = ({className}) => {
 		defaultValues: {
 			login: '',
 			password: '',
+			passcheck: ''
 		},
-		resolver: yupResolver(authFormSchema)
+		resolver: yupResolver(registerFormSchema)
 	});
 
 	const [serverError, setServerError] = useState(null);
@@ -54,7 +52,8 @@ const AuthorisationContainer = ({className}) => {
 	useResetForm(reset);
 
 	const onSubmit = ({login, password}) => {
-		server.authorize(login, password).then(({error, res}) => {
+		server.register(login, password).then(({error, res}) => {
+
 			if (error) {
 				setServerError(`Ошибка запроса: ${error}`);
 				return;
@@ -64,8 +63,7 @@ const AuthorisationContainer = ({className}) => {
 		});
 	};
 
-	const formError = errors?.login?.message || errors?.password?.message;
-	console.log(!!formError)
+	const formError = errors?.login?.message || errors?.password?.message || errors?.passcheck?.message;
 	const errorMessage = formError || serverError;
 
 	if (roleId !== ROLE.GUEST) {
@@ -74,20 +72,20 @@ const AuthorisationContainer = ({className}) => {
 
 	return (
 		<div className={className}>
-			<H2>Авторизация</H2>
+			<H2>Регистрация</H2>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<Input type="text"
 					   placeholder="Логин..." {...register('login', {onChange: () => setServerError(null),})}/>
 				<Input type="password" placeholder="Пароль..." {...register('password', {onChange: () => setServerError(null),})}/>
-				<Button type="submit" disabled={!!formError}>Авторизоваться</Button>
+				<Input type="password" placeholder="Проверка пароля..." {...register('passcheck', {onChange: () => setServerError(null),})}/>
+				<Button type="submit" disabled={!!formError}>Зарегистрироваться</Button>
 				{errorMessage && <AuthFormError>{errorMessage}</AuthFormError>}
-				<StyledLink to="/register">Регистрация</StyledLink>
 			</form>
 		</div>
 	);
 };
 
-export const Authorisation = styled(AuthorisationContainer)`
+export const Registration = styled(RegistrationContainer)`
 	display: flex;
 	align-items: center;
 	flex-direction: column;
@@ -98,5 +96,3 @@ export const Authorisation = styled(AuthorisationContainer)`
 		width: 260px;
 	}
 `;
-
-// TODO: доработать кнопку. Почему она не дизаблится?
