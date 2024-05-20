@@ -11,16 +11,17 @@ body {
 	sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: #405060;
+	background-color: #122a2b;
 }
 
 a {
-	color: #000000;
+	color: #ffffff;
 	text-decoration: none;
 }
 
 html, body, #root {
 	height: 100%;
+	color: #ffffff;
 }
 
 code {
