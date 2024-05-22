@@ -65,7 +65,6 @@ const AuthorisationContainer = ({className}) => {
 	};
 
 	const formError = errors?.login?.message || errors?.password?.message;
-	console.log(!!formError)
 	const errorMessage = formError || serverError;
 
 	if (roleId !== ROLE.GUEST) {

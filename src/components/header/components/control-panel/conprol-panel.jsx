@@ -17,13 +17,6 @@ const StyledLink = styled(Link)`
 	color: #000000;
 `;
 
-const StyledIcon = styled.div`
-	&:hover {
-		cursor: pointer;
-		color: #ee07ce;
-	}
-`;
-
 const UserName = styled.div`
 	font-size: 18px;
 	font-weight: 500;
@@ -41,14 +34,12 @@ const ControlPanelContainer = ({className}) => {
 
 			{roleId === ROLE.GUEST ? (<Button><StyledLink to="/login">Войти</StyledLink></Button>) : (<>
 				<UserName>{login}</UserName>
-				<StyledIcon>
 					<Icon onClick={() => dispatch(logout(session))} id="fa-sign-out" margin="0 0 0 10px"/>
-				</StyledIcon>
 			</>)}
 
 		</RightAligned>
 		<RightAligned>
-			<StyledIcon onClick={() => navigate(-1)}><Icon id="fa-backward" margin="10px 0 0 0"/></StyledIcon>
+			<Icon id="fa-backward" margin="10px 0 0 0" onClick={() => navigate(-1)}/>
 			<Link to="/post"><Icon id="fa-file-text-o" margin="10px 0 0 16px"/></Link>
 			<Link to="users"><Icon id="fa-users" margin="10px 0 0 16px"/></Link>
 		</RightAligned>

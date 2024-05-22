@@ -8,52 +8,10 @@
       "role_id": 0
     },
     {
-      "id": "cbd2",
+      "id": "5174",
       "login": "Nata",
-      "password": "123qwerty",
-      "registered_at": "2039-03-16 04:47",
-      "role_id": 2
-    },
-    {
-      "id": "9edc",
-      "login": "Natali",
-      "password": "123qwerty",
-      "registered_at": "2049-01-11 02:31",
-      "role_id": 2
-    },
-    {
-      "id": "a9b6",
-      "login": "Natalika",
-      "password": "123qwerty",
-      "registered_at": "2046-08-31 15:30",
-      "role_id": 2
-    },
-    {
-      "id": "7de2",
-      "login": "Nata1",
       "password": "qwerty123",
-      "registered_at": "2033-07-11 05:34",
-      "role_id": 2
-    },
-    {
-      "id": "2392",
-      "login": "Gella1",
-      "password": "qwerty123",
-      "registered_at": "2053-08-31 06:08",
-      "role_id": 2
-    },
-    {
-      "id": "c8fd",
-      "login": "Gella2",
-      "password": "qwerty123",
-      "registered_at": "2042-11-12 15:46",
-      "role_id": 2
-    },
-    {
-      "id": "1e56",
-      "login": "Gella3",
-      "password": "qwerty123",
-      "registered_at": "2049-04-30 12:04",
+      "registered_at": "2035-03-07 18:00",
       "role_id": 2
     }
   ],
