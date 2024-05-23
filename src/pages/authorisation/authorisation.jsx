@@ -97,5 +97,3 @@ export const Authorisation = styled(AuthorisationContainer)`
 		width: 260px;
 	}
 `;
-
-// TODO: доработать кнопку. Почему она не дизаблится?
