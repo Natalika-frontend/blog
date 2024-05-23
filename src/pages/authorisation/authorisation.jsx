@@ -65,7 +65,6 @@ const AuthorisationContainer = ({className}) => {
 	};
 
 	const formError = errors?.login?.message || errors?.password?.message;
-	console.log(!!formError)
 	const errorMessage = formError || serverError;
 
 	if (roleId !== ROLE.GUEST) {
@@ -98,5 +97,3 @@ export const Authorisation = styled(AuthorisationContainer)`
 		width: 260px;
 	}
 `;
-
-// TODO: доработать кнопку. Почему она не дизаблится?

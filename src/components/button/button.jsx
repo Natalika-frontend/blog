@@ -13,7 +13,7 @@ export const Button = styled(ButtonContainer)`
 	color: #000000;
 	border: 1px solid #ffffff;
 	border-radius: 3px;
-	background-color: #dddddd;
+	background-color: ${({ disabled }) => disabled ? '#cccccc' : '#dd9595'};
 	text-align: center;
 	align-content: center;
 
