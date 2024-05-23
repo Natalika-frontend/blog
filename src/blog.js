@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { Route, Routes } from "react-router-dom";
-import { Footer, Header } from "./components";
-import { Authorisation, Registration, Users } from "./pages";
+import styled from 'styled-components';
+import { Route, Routes } from 'react-router-dom';
+import { Footer, Header } from './components';
+import { Authorisation, Post, Registration, Users } from './pages';
 
 const AppColumn = styled.div`
 	display: flex;
@@ -20,14 +20,14 @@ const Page = styled.div`
 export const Blog = () => {
 	return (
 		<AppColumn>
-			<Header/>
+			<Header />
 			<Page>
 				<Routes>
 					<Route path="/" element={<div>Главная страница</div>} />
 					<Route path="/login" element={<Authorisation />} />
 					<Route path="/register" element={<Registration />} />
 					<Route path="/users" element={<Users />} />
-					<Route path="/post/:post_id" element={<div>Статьи</div>} />
+					<Route path="/post/:id" element={<Post />} />
 					<Route path="/post" element={<div>Новая статья</div>} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
@@ -35,4 +35,4 @@ export const Blog = () => {
 			<Footer />
 		</AppColumn>
 	);
-}
+};
