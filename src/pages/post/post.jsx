@@ -20,12 +20,12 @@ const PostContainer = ({ className }) => {
 	return (
 		<div className={className}>
 			<PostContent post={post} />
-			<Comments comments={post.comments} />
+			<Comments comments={post.comments} postId={post.id} />
 		</div>
 	);
 };
 
 export const Post = styled(PostContainer)`
-	color: white;
-	padding: 40px 80px;
+	margin: 40px 0;
+	padding: 0 80px;
 `;
