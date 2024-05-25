@@ -1,17 +1,23 @@
-import styled from "styled-components";
-import { ControlPanel, Logo } from "./components";
+import styled from 'styled-components';
+import { ControlPanel, Logo } from './components';
 
 const Description = styled.div`
 	font-style: italic;
 `;
 
-const HeaderContainer = ({ className }) => <header className={className}>
-   <Logo />
-	<Description>
-		Советы для писателя<br />Творческое письмо<br />Идеи и вдохновение
-	</Description>
-	<ControlPanel />
-</header>
+const HeaderContainer = ({ className }) => (
+	<header className={className}>
+		<Logo />
+		<Description>
+			Советы для писателя
+			<br />
+			Творческое письмо
+			<br />
+			Идеи и вдохновение
+		</Description>
+		<ControlPanel />
+	</header>
+);
 
 export const Header = styled(HeaderContainer)`
 	display: flex;
@@ -23,4 +29,5 @@ export const Header = styled(HeaderContainer)`
 	padding: 20px 40px;
 	box-shadow: 0px 10px 17px -13px #ffffff;
 	background-color: #000000;
+	z-index: 10;
 `;
