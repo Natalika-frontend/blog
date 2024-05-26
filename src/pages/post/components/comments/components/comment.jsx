@@ -41,7 +41,6 @@ const CommentContainer = ({
 							id="fa-user-circle-o"
 							size="18px"
 							margin="0 10px 0 0"
-							onClick={() => {}}
 						/>
 						{author}
 					</div>
@@ -50,7 +49,6 @@ const CommentContainer = ({
 							id="fa-calendar-o"
 							size="18px"
 							margin="0 10px 0 0"
-							onClick={() => {}}
 						/>
 						{publishedAt}
 					</div>
