@@ -105,7 +105,15 @@
       "content": "fgdfgdfgdfgdfgdfgdfgdfg"
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "author_id": "001",
+      "post_id": "d37a",
+      "published_at": "2039-02-27 06:00",
+      "content": "Удивительно, но всё работает!!",
+      "id": 1
+    }
+  ],
   "sessions": [
     {
       "id": "668d",

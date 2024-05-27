@@ -29,7 +29,7 @@ const PostCardContainer = ({
 							<Icon
 								inactive={true}
 								id="fa-comment-o"
-								margin="0 10px 0 0"
+								margin="0 5px 0 0"
 							/>
 							{commentsCount}
 						</div>
