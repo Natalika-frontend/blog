@@ -1,8 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const ButtonContainer = ({ children, className, width, ...props }) => {
 	return (
-		<button className={className} {...props}>{children}</button>
+		<button className={className} {...props}>
+			{children}
+		</button>
 	);
 };
 
@@ -13,11 +15,11 @@ export const Button = styled(ButtonContainer)`
 	color: #000000;
 	border: 1px solid #ffffff;
 	border-radius: 3px;
-	background-color: ${({ disabled }) => disabled ? '#cccccc' : '#dd9595'};
+	background-color: ${({ disabled }) => (disabled ? '#cccccc' : '#dd9595')};
 	text-align: center;
 	align-content: center;
 
 	&:hover {
-		cursor: pointer;
+		cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
 	}
 `;
