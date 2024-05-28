@@ -13,6 +13,13 @@
       "password": "qwerty123",
       "registered_at": "2024-05-11",
       "role_id": 1
+    },
+    {
+      "login": "Ivan",
+      "password": "qwerty123",
+      "registered_at": "2041-03-05 02:38",
+      "role_id": 2,
+      "id": "dvnYjv4"
     }
   ],
   "roles": [
@@ -112,96 +119,26 @@
       "published_at": "2039-02-27 06:00",
       "content": "Удивительно, но всё работает!!",
       "id": 1
+    },
+    {
+      "author_id": "002",
+      "post_id": "004",
+      "published_at": "2037-08-17 13:37",
+      "content": "Привет, дорогая))) Как видишь, все работает)))",
+      "id": 2
     }
   ],
   "sessions": [
     {
-      "id": "668d",
-      "hash": "0.33980467747707354675412716460414230823516845703125",
+      "hash": "0.05374811441182569815566694160224869847297668457031",
       "user": {
         "id": "001",
         "login": "Gella",
         "password": "qwerty123",
         "registeredAt": "2024-05-11",
         "roleId": 0
-      }
-    },
-    {
-      "id": "fabb",
-      "hash": "0.02813276524998475913719175878213718533515930175781",
-      "user": {
-        "id": "001",
-        "login": "Gella",
-        "password": "qwerty123",
-        "registeredAt": "2024-05-11",
-        "roleId": 0
-      }
-    },
-    {
-      "id": "5271",
-      "hash": "0.31003759163437116797013004543259739875793457031250",
-      "user": {
-        "id": "001",
-        "login": "Gella",
-        "password": "qwerty123",
-        "registeredAt": "2024-05-11",
-        "roleId": 0
-      }
-    },
-    {
-      "id": "aecf",
-      "hash": "0.42932940144780129543278235360048711299896240234375",
-      "user": {
-        "id": "001",
-        "login": "Gella",
-        "password": "qwerty123",
-        "registeredAt": "2024-05-11",
-        "roleId": 0
-      }
-    },
-    {
-      "id": "c657",
-      "hash": "0.88215254776874152398136175179388374090194702148438",
-      "user": {
-        "id": "001",
-        "login": "Gella",
-        "password": "qwerty123",
-        "registeredAt": "2024-05-11",
-        "roleId": 0
-      }
-    },
-    {
-      "id": "1d5f",
-      "hash": "0.87553040823474947984550453838892281055450439453125",
-      "user": {
-        "id": "001",
-        "login": "Gella",
-        "password": "qwerty123",
-        "registeredAt": "2024-05-11",
-        "roleId": 0
-      }
-    },
-    {
-      "id": "fbef",
-      "hash": "0.86690995365507284020623046671971678733825683593750",
-      "user": {
-        "id": "001",
-        "login": "Gella",
-        "password": "qwerty123",
-        "registeredAt": "2024-05-11",
-        "roleId": 0
-      }
-    },
-    {
-      "id": "d742",
-      "hash": "0.90917099727602268544046637543942779302597045898438",
-      "user": {
-        "id": "001",
-        "login": "Gella",
-        "password": "qwerty123",
-        "registeredAt": "2024-05-11",
-        "roleId": 0
-      }
+      },
+      "id": 1
     }
   ]
 }
