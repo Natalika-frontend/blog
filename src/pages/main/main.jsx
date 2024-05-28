@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import { useEffect, useMemo, useState } from 'react';
 import { useServerRequest } from '../../hooks';
 import { Pagination, PostCard, Search } from './components';
-import { PAGINATION_LIMIT } from '../../bff/constants';
 import { debounce, getLastPageFromLinks } from './utils';
+import { PAGINATION_LIMIT } from '../../constants';
 
 const MainContainer = ({ className }) => {
 	const [posts, setPosts] = useState([]);
