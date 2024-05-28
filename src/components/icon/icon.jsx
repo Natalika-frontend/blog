@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const IconContainer = ({ className, id, inactive, ...props }) => (
 	<div className={className} {...props}>
@@ -16,3 +17,8 @@ export const Icon = styled(IconContainer)`
 		color: ${({ disabled }) => (disabled ? '#f3dbdb' : '#ee07ce')};
 	}
 `;
+
+Icon.propTypes = {
+	id: PropTypes.string.isRequired,
+	inactive: PropTypes.bool,
+};

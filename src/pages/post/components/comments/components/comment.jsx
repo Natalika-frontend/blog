@@ -10,6 +10,7 @@ import { useServerRequest } from '../../../../../hooks';
 import { checkAccess } from '../../../../../utils';
 import { ROLE } from '../../../../../constants';
 import { selectUserRole } from '../../../../../selectors';
+import PropTypes from 'prop-types';
 
 const CommentContainer = ({
 	className,
@@ -56,7 +57,7 @@ const CommentContainer = ({
 					</div>
 					<div className="published-at">
 						<Icon
-							inactive="true"
+							inactive={true}
 							id="fa-calendar-o"
 							size="18px"
 							margin="0 10px 0 0"
@@ -100,3 +101,11 @@ export const Comment = styled(CommentContainer)`
 		display: flex;
 	}
 `;
+
+Comment.propTypes = {
+	postId: PropTypes.string.isRequired,
+	id: PropTypes.number.isRequired,
+	author: PropTypes.string.isRequired,
+	content: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+};
