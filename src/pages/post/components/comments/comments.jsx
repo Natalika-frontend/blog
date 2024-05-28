@@ -6,7 +6,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectUserId, selectUserRole } from '../../../../selectors';
 import { addCommentAsync } from '../../../../actions';
 import { useServerRequest } from '../../../../hooks';
-import { ROLE } from '../../../../constants';
+import { PROP_TYPE, ROLE } from '../../../../constants';
+import PropTypes from 'prop-types';
 
 const CommentsContainer = ({ className, comments, postId }) => {
 	const [newComment, setNewComment] = useState('');
@@ -77,3 +78,8 @@ export const Comments = styled(CommentsContainer)`
 		}
 	}
 `;
+
+Comments.propTypes = {
+	comments: PropTypes.arrayOf(PROP_TYPE.COMMENT).isRequired,
+	postId: PropTypes.string.isRequired,
+};
